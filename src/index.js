@@ -37,6 +37,7 @@ function domAdderNames(obj){
         li.addEventListener("click", () => li.style.color = "#FF0000")
         main.appendChild(li)
     })
+    filter();
 }
 
 
@@ -52,6 +53,7 @@ function filter(){
             item.style.display = ""
         }
     })
+    
 }
 
 
@@ -59,7 +61,6 @@ function filter(){
 document.addEventListener('DOMContentLoaded', function(){
     fetchImage();
     fetchName();
-
     const dropDown = document.getElementById('breed-dropdown');
     dropDown.addEventListener('change', filter); 
 })
